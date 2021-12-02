@@ -1,0 +1,50 @@
+// Contextual backgrounds
+@mixin bg-variant($parent, $color) {
+  #{$parent} {
+    background-color: $color !important;
+  }
+  a#{$parent},
+  button#{$parent} {
+    @include hover-focus {
+      background-color: darken($color, 10%) !important;
+    }
+  }
+}
+
+@mixin bg-gradient-variant($parent, $color) {
+  #{$parent} {
+    background: linear-gradient(
+      87deg,
+      $color 0,
+      adjust-hue($color, 25%) 100%
+    ) !important;
+  }
+  .bg-profile-default {
+    background: linear-gradient(
+      87deg,
+      $color 0,
+      adjust-hue(yellow, 25%) 100%
+    ) !important;
+  }
+  .bg-movies-default {
+    background: linear-gradient(
+      87deg,
+      $color 0,
+      adjust-hue(rgb(255, 238, 0), 0%) 90%
+    ) !important;
+  }
+  .bg-contact-default {
+    background: linear-gradient(
+      87deg,
+      $color 0,
+      adjust-hue(rgb(255, 8, 0), 15%) 70%
+    ) !important;
+  }
+  .bg-single-default {
+    background: linear-gradient(
+      87deg,
+      $color 0,
+      adjust-hue(rgb(39, 38, 38), 65%) 70%
+    ) !important;
+  }
+}
