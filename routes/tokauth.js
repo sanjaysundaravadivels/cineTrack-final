@@ -2,8 +2,7 @@ const express = require("express");
 const router = express.Router();
 const auth = require("../middleware/auth");
 const { OAuth2Client } = require("google-auth-library");
-const CLIENT_ID =
-  "210919768460-tlrb8mtabkelddo6i8sbmge3lmtdk61d.apps.googleusercontent.com";
+const CLIENT_ID = "GET YOUR CLIENT ID";
 const client = new OAuth2Client(CLIENT_ID);
 router.post("/", async (req, res) => {
   let token = req.body.token;

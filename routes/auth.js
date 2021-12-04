@@ -5,8 +5,7 @@ const User = require("../models/User");
 const config = require("config");
 
 const { OAuth2Client } = require("google-auth-library");
-const CLIENT_ID =
-  "210919768460-tlrb8mtabkelddo6i8sbmge3lmtdk61d.apps.googleusercontent.com";
+const CLIENT_ID = "GET your CLIENT ID";
 const client = new OAuth2Client(CLIENT_ID);
 // @rute GET api/auth
 // @desc Test route
